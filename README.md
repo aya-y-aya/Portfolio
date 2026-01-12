@@ -11,13 +11,13 @@
 
   `npm install tailwindcss @tailwindcss/cli`
   
-  <li>Create Directory for Tailwind CSS</li>
+  <li>Create New Directory for CSS Styles</li>
 
     project
     ├── src 
     ├──── input.css 
     
-  <li>Import in <b>input.css </b>File</li>
+  <li>Import in <b>input.css</b>File</li>
 
   `@import "tailwindcss";`
 
@@ -26,12 +26,11 @@
     project
     ├── src 
     ├──── input.css 
-    ├── dist
     ├──── index.html 
 
   <li>Paste as script, in <b>package.json</b> File</li>
 
-  `"dev": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/styles.css --watch"`
+  `"dev": "npx @tailwindcss/cli -i ./src/input.css -o ./src/styles.css --watch"`
   
   <li>Run:</li>
 
