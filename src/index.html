@@ -4,21 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./styles.css" rel="stylesheet">
+    <script src="./script.js"></script>
     <title>Portfolio</title>
 </head>
-<body>
+<body class="bg-white">
     <!-- Navigation Bar Section -->
-    <div class="class">
-        <div class="class">
-            <!-- TANYA NAVEEN P. VARGAS/ Portfolio -->
+    <nav class="relative bg-white p-4">
+        <div class="flex sm:items-stretch md:justify-start lg:justify-around flex-1">
+            <div class="flex items-start lg:items-center flex-col lg:flex-row text-rosy-copper-600 gap-1">
+                <div class="font-bold font-libre-baskerville">TANYA NAVEEN P. VARGAS/</div>
+                <div class="font-libre-baskerville">Portfolio</div>
+            </div>
+            <div class="hidden items-end md:ml-6 md:block">
+                <div class="flex space-x-3">
+                    <a href="#" aria-current="page" class="rounded-md bg-gray-950/50 px-3 py-2 text-sm font-bold font-libre-baskerville text--rosy-copper-950">ABOUT ME</a>
+                    <a href="#" class="rounded-md px-3 py-2 text-sm font-bold font-libre-baskerville text-rosy-copper-950 hover:bg-white/5 hover:text-white">RESUME</a>
+                    <a href="#" class="rounded-md px-3 py-2 text-sm font-bold font-libre-baskerville text-rosy-copper-950 hover:bg-white/5 hover:text-white">PROJECTS</a>
+                    <a href="#" class="rounded-md px-3 py-2 text-sm font-bold font-libre-baskerville text-rosy-copper-950 hover:bg-white/5 hover:text-white">CONTACT</a>
+                </div>
+            </div>
         </div>
-        <div class="class">
-            <!-- ABOUT ME -->
-            <!-- RESUME -->
-            <!-- PROJECTS -->
-            <!-- CONTACT -->
+
+        <div class="absolute inset-y-0 right-0 flex items-center md:hidden">
+            <button id="mobile-menu-btn" type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500">
+            <span class="sr-only">Open main menu</span>
+            <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            </button>
         </div>
-    </div>
+
+        <div class="hidden sm:hidden" id="mobile-menu">
+            <div class="space-y-0.5 px-2 pb-1.5 pt-1">
+                <a href="#" class="block rounded-md bg-gray-950/50 px-1 py-2 text-base font-bold font-libre-baskerville text-rosy-copper-950">ABOUT ME</a>
+                <a href="#" class="block rounded-md px-1 py-2 text-base font-bold font-libre-baskerville text-rosy-copper-950 hover:bg-gray-100">RESUME</a>
+                <a href="#" class="block rounded-md px-1 py-2 text-base font-bold font-libre-baskerville text-rosy-copper-950 hover:bg-gray-100">PROJECTS</a>
+                <a href="#" class="block rounded-md px-1 py-2 text-base font-bold font-libre-baskerville text-rosy-copper-950 hover:bg-gray-100">CONTACT</a>
+            </div>
+        </div>
+    </nav>
 
     <!-- Introduction Section-->
 

@@ -1,1 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 @import "tailwindcss";
+
+@font-face {
+    font-family: "Libre Baskerville", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&display=swap');
+}
+
+@font-face {
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+}
+
+@theme{
+    --color-*: initial;
+    --color-rosy-copper-50: oklch(95.64% 0.011 31.07);
+    --color-rosy-copper-100: oklch(91.15% 0.025 26.93);
+    --color-rosy-copper-200: oklch(82.49% 0.051 28.95);
+    --color-rosy-copper-300: oklch(73.72% 0.080 28.88);
+    --color-rosy-copper-400: oklch(65.21% 0.112 29.44);
+    --color-rosy-copper-500: oklch(57.40% 0.143 30.97);
+    --color-rosy-copper-600: oklch(48.83% 0.120 30.53);
+    --color-rosy-copper-700: oklch(40.04% 0.094 30.61);
+    --color-rosy-copper-800: oklch(30.74% 0.067 30.82);
+    --color-rosy-copper-900: oklch(20.52% 0.038 28.89);
+    --color-rosy-copper-950: oklch(17.33% 0.029 28.04);
+
+    --font-libre-baskerville: "Libre Baskerville", serif;
+    --font-figtree: "Figtree", sans-serif;
+}
