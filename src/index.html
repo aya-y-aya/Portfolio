@@ -8,7 +8,7 @@
 </head>
 <body class="bg-white overflow-x-hidden">
     <!-- Navigation Bar Section -->
-    <nav class="relative bg-white p-4">
+    <nav class="fixed top-0 z-10 bg-white p-4 shadow-xl w-full h-auto">
         <div class="flex sm:items-stretch justify-start md:justify-evenly lg:justify-around flex-1">
             <div class="flex items-start lg:items-center flex-col lg:flex-row text-rosy-copper-600 gap-1">
                 <div class="font-bold font-libre-baskerville">TANYA NAVEEN P. VARGAS/</div>
@@ -25,7 +25,8 @@
         </div>
 
         <div class="absolute right-4 top-4 flex items-center md:hidden">
-            <button id="mobile-menu-btn" type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500">
+            <button id="mobile-menu-btn" data-collapse-toggle="navbar-sticky" type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500">
+            <!-- <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary" aria-controls="navbar-sticky" aria-expanded="false"></button> -->
             <span class="sr-only">Open main menu</span>
             <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -34,18 +35,18 @@
         </div>
 
         <div class="hidden sm:hidden" id="mobile-menu">
-            <div class="space-y-0.5 px-2 pb-1.5 pt-1">
-                <a href="#" class="block rounded-md px-1 py-2 text-sm font-bold font-libre-baskerville text-rosy-copper-950 hover:text-rosy-copper-500">ABOUT ME</a>
-                <a href="#" class="block rounded-md px-1 py-2 text-sm font-bold font-libre-baskerville text-rosy-copper-950 hover:text-rosy-copper-500">RESUME</a>
-                <a href="#" class="block rounded-md px-1 py-2 text-sm font-bold font-libre-baskerville text-rosy-copper-950 hover:text-rosy-copper-500">PROJECTS</a>
-                <a href="#" class="block rounded-md px-1 py-2 text-sm font-bold font-libre-baskerville text-rosy-copper-950 hover:text-rosy-copper-500">CONTACT</a>
+            <div class="space-y-0.5 px-2 pb-1.5 pt-1 mt-2">
+                <a href="#" class="block rounded-md px-1 py-2 text-sm font-bold font-libre-baskerville text-rosy-copper-950 hover:text-rosy-copper-50 hover:bg-rosy-copper-300">ABOUT ME</a>
+                <a href="#" class="block rounded-md px-1 py-2 text-sm font-bold font-libre-baskerville text-rosy-copper-950 hover:text-rosy-copper-50 hover:bg-rosy-copper-300">RESUME</a>
+                <a href="#" class="block rounded-md px-1 py-2 text-sm font-bold font-libre-baskerville text-rosy-copper-950 hover:text-rosy-copper-50 hover:bg-rosy-copper-300">PROJECTS</a>
+                <a href="#" class="block rounded-md px-1 py-2 text-sm font-bold font-libre-baskerville text-rosy-copper-950 hover:text-rosy-copper-50 hover:bg-rosy-copper-300">CONTACT</a>
             </div>
         </div>
     </nav>
 
     <!-- Introduction Section-->
-    <section class="flex flex-col items-center">
-        <div class="flex p-4 flex-col md:flex-row w-full max-h-max justify-center items-center gap-2 md:gap-10">
+    <section class="flex flex-col items-center p-3">
+        <div class="flex p-4 flex-col md:flex-row w-full max-h-max justify-center items-center gap-2 md:gap-10 mt-16">
             <div class="w-full md:w-1/2 space-y-4">
                 <div class="p-1 lg:p-3">
                     <h1 class="font-bold font-libre-baskerville text-[28px] md:text-[38px] lg:text-[48px] text-rosy-copper-950">Nice to meet you!</h1>
