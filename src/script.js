@@ -56,4 +56,71 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         div2Element.appendChild(skillName);
     });
+
+    //Certificate & Courses Section
+    const certificateDetails =[
+        ['Introduction to Cloud 101','Jan 2026','A Foundational Course on AWS Educate.','Foundational Knowledge on Cloud Computing,  AWS Core Services, and Cloud Careers.','https://www.credly.com/badges/4cd8f78b-96ac-4d98-ae08-0dc88c8d56bc/linked_in_profile'],
+        ['IT Specialist - IT Networking','May 2025','Information Technology Specialist: Networking Certification from Certiport.','Foundational Knowledge on Network Infrastructures, Hardware,  Protocol and Services, and Troubleshooting.','https://www.credly.com/badges/29fa585c-554e-4535-95a7-e8618a0beb0f/linked_in_profile'],
+        ['Programming with JavaScript','July 2024','Course completion on JavaScript offered by META in Coursera.','Foundational knowledge on JavaScript concepts and syntax.','https://www.coursera.org/account/accomplishments/verify/7MX5FKEK849U'],
+        ['Introduction to Front-End Development','June 2024','Course completion on Front-End Development offered by META in Coursera.','Foundational knowledge on HTML structure CSS, and General Networking.','https://www.coursera.org/account/accomplishments/verify/YSQWHXGGWT2L'],
+        ['Introduction to Data Analysis using Microsoft Excel','June 2024','Course completion on Data Analysis using Microsoft Excel offered by Coursera.','Foundational knowledge on  Microsoft Excel Formulas and Data Manipulation.','https://www.coursera.org/account/accomplishments/verify/ZYXMXM4YEQGZ'],
+        ['Infrastructure Camp Workshop','April 2024','A Infrastructure Camp: AWS CC - PUP Manila','Foundational Knowledge in AWS Identity and Access Management (IAM), Virtual Private Cloud (VPC), and Amazon Simple Storage Service (S3).','./view/Vargas_Infrastructure-Camp.png']
+    ];
+
+    const certiContainer = document.getElementById('certificate-container');
+
+    certificateDetails.forEach(([title, date, desc1, desc2, url])=>{
+        // create a div per certifications
+        const certiDiv = document.createElement('div');
+        certiDiv.className = 'bg-white rounded-lg p-4 w-auto h-auto';
+        certiContainer.appendChild(certiDiv);
+
+        // create header div (title and date)
+        const headerDiv = document.createElement('div');
+        headerDiv.className = 'flex flex-row justify-between';
+        certiDiv.appendChild(headerDiv);
+
+        // create element for  title and date
+        const titleDiv = document.createElement('h3');
+        const dateDiv = document.createElement('h3');
+        Object.assign(titleDiv, {
+            textContent: title,
+            className: 'font-libre-baskerville font-bold text-[16px]'
+        });
+        Object.assign(dateDiv, {
+            textContent: date,
+            className: 'font-libre-baskerville font-bold text-[14px]'
+        });
+        headerDiv.appendChild(titleDiv);
+        headerDiv.appendChild(dateDiv);
+
+        // create element for Description div
+        const descDiv = document.createElement('div');
+        descDiv.className = 'flex p-2';
+        certiDiv.appendChild(descDiv);
+
+        // create element for Unordered List
+        const unorderedList = document.createElement('ul');
+        unorderedList.className = 'list-disc font-figtree text-[14px] text-left space-y-2 pl-5';
+        descDiv.appendChild(unorderedList);
+        
+        // create element for 2 list items
+        const listDesc1 = document.createElement('li');
+        listDesc1.textContent = desc1;
+        unorderedList.appendChild(listDesc1);
+
+        const listDesc2 = document.createElement('li');
+        listDesc2.textContent = desc2;
+        unorderedList.appendChild(listDesc2);
+    
+        // create element for link
+        const link = document.createElement('a');
+        Object.assign(link, {
+            textContent: 'View Certification',
+            className: 'font-figtree text-[14px] text-rose-600 underline visited:text-rose-950',
+            href: url,
+            target: '_blank'
+        });
+        certiDiv.appendChild(link);
+    });
 });
