@@ -123,4 +123,78 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         certiDiv.appendChild(link);
     });
+
+    // Projects Section
+    const projectsDetails = [
+        ['/assets/images/projects/placeholder.jpg','project-picture', 'Front-End: TicTacToe', 'lorem ipsum  lorem ipsum  lorem ipsum lorem ipsum lorem ipsum lorem ipsum', 'https://www.google.com'],
+        ['/assets/images/projects/placeholder.jpg','project-picture', 'Front-End: TicTacToe', 'lorem ipsum  lorem ipsum  lorem ipsum lorem ipsum lorem ipsum lorem ipsum', 'https://www.google.com'],
+        ['/assets/images/projects/placeholder.jpg','project-picture', 'Front-End: TicTacToe', 'lorem ipsum  lorem ipsum  lorem ipsum lorem ipsum lorem ipsum lorem ipsum', 'https://www.google.com'],
+        ['/assets/images/projects/placeholder.jpg','project-picture', 'Front-End: TicTacToe', 'lorem ipsum  lorem ipsum  lorem ipsum lorem ipsum lorem ipsum lorem ipsum', 'https://www.google.com'],
+        ['/assets/images/projects/placeholder.jpg','project-picture', 'Front-End: TicTacToe', 'lorem ipsum  lorem ipsum  lorem ipsum lorem ipsum lorem ipsum lorem ipsum', 'https://www.google.com'],
+        ['/assets/images/projects/placeholder.jpg','project-picture', 'Front-End: TicTacToe', 'lorem ipsum  lorem ipsum  lorem ipsum lorem ipsum lorem ipsum lorem ipsum', 'https://www.google.com']
+    ];
+
+    const projectContainer = document.getElementById('project-container');
+
+    projectsDetails.forEach(([imgSrc, altImg, projectTitle, projectDescription, linkHref])=>{
+        // div for individual project
+        const projectDiv = document.createElement('div');
+        projectDiv.className = 'rounded-lg w-75 h-auto overflow-hidden drop-shadow-lg';
+        projectContainer.appendChild(projectDiv);
+
+            // div for img placeholder
+            const imgDiv = document.createElement('div');
+            imgDiv.className = 'bg-rosy-copper-500 h-75';
+            projectDiv.appendChild(imgDiv);
+
+                // img
+                const imgProject = document.createElement('img');
+                Object.assign(imgProject, {
+                    src: imgSrc,
+                    alt: altImg,
+                    className: 'h-full w-full object-cover'
+                });
+                imgDiv.appendChild(imgProject);
+
+        // div for project body
+        const projectBodyDiv = document.createElement('div');
+        projectBodyDiv.className = 'grid col-3 bg-rosy-copper-100 h-auto p-4';
+        projectDiv.appendChild(projectBodyDiv);
+
+            // div for project title
+            const projTitleDiv = document.createElement('div');
+            projTitleDiv.className = 'grid col-span-3 font-libre-baskerville text-rosy-copper-950 text-[16px] font-bold p-1';
+            projectBodyDiv.appendChild(projTitleDiv);
+
+                // h3 for title
+                const projTitleElement = document.createElement('h3');
+                projTitleElement.textContent = projectTitle;
+                projTitleDiv.appendChild(projTitleElement);
+
+            // div for project description
+            const projDescriptionDiv = document.createElement('div');
+            Object.assign(projDescriptionDiv, {
+                className: 'grid col-span-3 font-figtree text-rosy-copper-950 text-[12px] p-1',
+                textContent: projectDescription
+            });
+            projectBodyDiv.appendChild(projDescriptionDiv);
+
+                // p for project description content
+                const projDescriptionContent = document.createElement('p');
+                Object.assign(projDescriptionContent, {
+                    textContent: projectDescription
+                });
+                projDescriptionDiv.appendChild(projDescriptionContent);
+
+            // anchor element for more info
+            const buttonMore = document.createElement('a');
+            Object.assign(buttonMore, {
+                href: linkHref,
+                target: '_blank',
+                className: 'grid col-span-1 col-start-3 place-content-center w-20 mt-2 p-1 rounded-[40px] bg-rosy-copper-600 hover:bg-rosy-copper-700 font-libre-baskerville text-rosy-copper-50 text-[12px] font-bold',
+                textContent: 'MORE'
+            });
+            projectBodyDiv.appendChild(buttonMore);
+
+    });
 });
