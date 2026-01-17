@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     certificateDetails.forEach(([title, date, desc1, desc2, url])=>{
         // create a div per certifications
         const certiDiv = document.createElement('div');
-        certiDiv.className = 'bg-white rounded-lg p-4 w-auto h-auto';
+        certiDiv.className = 'bg-white rounded-lg p-4 w-auto h-auto drop-shadow-lg';
         certiContainer.appendChild(certiDiv);
 
         // create header div (title and date)
