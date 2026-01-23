@@ -147,24 +147,23 @@
         
         <div class="border-2 border-solid border-black rounded-lg w-fit md:w-5/12 h-auto p-6 m-6">
 
-            <!-- TO DO: JS Code for Contact Form -->
-            <form class="max-w-full mx-auto space-y-5">
+            <form action="/" method="post" id="contactForm" class="max-w-full mx-auto space-y-5">
                 <div>
-                    <label for="visitors" class="block mb-2.5 text-sm font-figtree font-bold text-heading">Name</label>
-                    <input type="text" id="visitors" class="border border-solid border-black rounded-lg bg-neutral-secondary-medium border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-2.5 py-2 shadow-xs placeholder:text-body" placeholder="First Name, Surname" required />
+                    <label for="name" class="block mb-2.5 text-sm font-figtree font-bold text-heading">Name</label>
+                    <input type="text" id="name" name="name" class="border border-solid border-black rounded-lg bg-neutral-secondary-medium border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-2.5 py-2 shadow-xs placeholder:text-body" placeholder="First Name, Surname" required />
                 </div>
                 <div>
-                    <label for="input-group-1" class="block mb-2.5 text-sm font-figtree font-bold text-heading">Your Email</label>
+                    <label for="email" class="block mb-2.5 text-sm font-figtree font-bold text-heading">Your Email</label>
                     <div class="relative">
                         <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                             <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/></svg>
                         </div>
-                        <input type="text" id="input-group-1" class="block w-full ps-9 pe-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-lg focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" placeholder="name@flowbite.com">
+                        <input type="email" id="email" name="email" class="block w-full ps-9 pe-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-lg focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" placeholder="name@gmail.com" required>
                     </div>
                 </div>
                 <div>
                     <label for="message" class="block mb-2.5 text-sm font-figtree font-bold text-heading">Message</label>
-                    <textarea id="message" rows="4" class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base rounded-lg focus:ring-brand focus:border-brand block w-full p-3.5 shadow-xs placeholder:text-body" placeholder="Write your message here..."></textarea>
+                    <textarea type="text" id="message" name="message" rows="4" class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base rounded-lg focus:ring-brand focus:border-brand block w-full p-3.5 shadow-xs placeholder:text-body" placeholder="Write your message here..." required></textarea>
                 </div>
                 <button id="submit-btn" type="submit" class="w-full font-libre-baskerville font-bold text-rose-50 rounded-3xl bg-rosy-copper-600 box-border border border-transparent hover:bg-rosy-copper-600-strong focus:ring-4 focus:ring-brand-medium shadow-xs leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Submit</button>
             </form>
@@ -217,6 +216,6 @@
             </div>
         </div>
     </section>
-<script src="./script.js"></script>
+<script src="../frontend/script.js"></script>
 </body>
 </html>

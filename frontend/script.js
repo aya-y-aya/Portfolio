@@ -197,4 +197,39 @@ document.addEventListener('DOMContentLoaded', () => {
             projectBodyDiv.appendChild(buttonMore);
 
     });
+
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const submitButton = this.querySelector('submit-btn');
+
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            message: document.getElementById('message').value
+        };
+
+        console.log("Data being sent:", formData);
+
+        try {
+            const response = await fetch('http://localhost:3000/send-email', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            });
+
+            const result = await response.json();
+            alert(result.message);
+            
+            if(result.success) {
+                document.getElementById('contactForm').reset();
+            }
+
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Failed to send message.');
+        } finally {
+        }
+    });
+
 });

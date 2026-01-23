@@ -32,8 +32,23 @@
 
   `"dev": "npx @tailwindcss/cli -i ./src/input.css -o ./src/styles.css --watch"`
   
+</ol>
+
+<h2>Install (Backend)</h2>
+<ol>
+  <li>Install Node.js Frameworks</li>
+
+  `npm install express nodemailer cors`
+  
+  <li>Paste as script, in <b>package.json</b> File</li>
+
+  `"start": "node server.js"`
+  
+</ol>
+
+<h2>Run</h2>
+<ul>
   <li>Run:</li>
 
   `npm run dev`
-  
-</ol>
+</ul>
